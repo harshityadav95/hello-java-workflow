@@ -23,4 +23,4 @@ jobs:
           javac HelloWorld.java
           java HelloWorld
         env:
-          INPUT_USERNAME: harshityadav95
+          INPUT_USERNAME: ${{ secrets.USERNAME }}
