@@ -1,0 +1,26 @@
+name: Hello Java Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+
+      - name: Compile and run
+        run: |
+          javac HelloWorld.java
+          java HelloWorld
+        env:
+          INPUT_USERNAME: harshityadav95
